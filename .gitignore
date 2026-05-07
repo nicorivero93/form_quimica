@@ -7,6 +7,13 @@ node_modules/
 dist/
 dist-ssr/
 *.local
+*.tsbuildinfo
+
+# tsc incremental outputs (los .ts son la fuente, los .js/.d.ts no van al repo)
+vite.config.js
+vite.config.d.ts
+vitest.config.js
+vitest.config.d.ts
 
 # Editors
 .vscode/*
