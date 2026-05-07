@@ -1,8 +1,9 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, AlertTriangle, Target, FlaskConical, BookOpen, Brain } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, Target, FlaskConical, BookOpen, Brain, Check, Circle } from 'lucide-react';
 import { ANIOS_BY_ID } from '@/data/anios-quimica';
 import { AREAS_BY_ID } from '@/data/areas-quimica';
 import { getTemaBySlug, TEMAS } from '@/data/temas';
+import { useProgressStore } from '@/store/progress-store';
 import { BloqueTeoriaRender } from '@/components/aprender/BloqueTeoria';
 import { FormulaCard } from '@/components/aprender/FormulaCard';
 import { EjemploPasoAPaso } from '@/components/aprender/EjemploPasoAPaso';
@@ -18,6 +19,8 @@ const NIVEL_BADGE = {
 export function TemaPage() {
   const { slug } = useParams<{ slug: string }>();
   const tema = slug ? getTemaBySlug(slug) : undefined;
+  const completado = useProgressStore((s) => (slug ? !!s.completados[slug] : false));
+  const toggleCompletado = useProgressStore((s) => s.toggleCompletado);
 
   if (!tema) return <Navigate to="/aprender" replace />;
 
@@ -61,6 +64,20 @@ export function TemaPage() {
         </div>
         <h1 className="text-3xl font-bold text-slate-100 sm:text-4xl">{tema.titulo}</h1>
         <p className="text-sm text-slate-400 sm:text-base">{tema.resumen}</p>
+        <button
+          type="button"
+          onClick={() => toggleCompletado(tema.slug)}
+          aria-pressed={completado}
+          className={cn(
+            'mt-2 inline-flex w-fit items-center gap-2 rounded-lg border px-3 py-2 text-sm font-medium transition-colors',
+            completado
+              ? 'border-emerald-500/50 bg-emerald-500/15 text-emerald-200 hover:bg-emerald-500/20'
+              : 'border-slate-600 bg-slate-800/40 text-slate-300 hover:border-slate-500 hover:bg-slate-800',
+          )}
+        >
+          {completado ? <Check className="h-4 w-4" /> : <Circle className="h-4 w-4" />}
+          {completado ? 'Tema completado' : 'Marcar como completado'}
+        </button>
       </header>
 
       <Section icon={BookOpen} title="Teoría">

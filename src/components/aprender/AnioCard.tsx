@@ -6,14 +6,17 @@ import { cn } from '@/lib/utils';
 interface Props {
   anio: Anio;
   temasCount: number;
+  completadosCount: number;
 }
 
 const COLOR_CLASSES: Record<string, string> = {
   emerald: 'border-emerald-500/40 bg-emerald-500/10 hover:border-emerald-400 hover:bg-emerald-500/15 text-emerald-200',
   sky: 'border-sky-500/40 bg-sky-500/10 hover:border-sky-400 hover:bg-sky-500/15 text-sky-200',
+  fuchsia: 'border-fuchsia-500/40 bg-fuchsia-500/10 hover:border-fuchsia-400 hover:bg-fuchsia-500/15 text-fuchsia-200',
 };
 
-export function AnioCard({ anio, temasCount }: Props) {
+export function AnioCard({ anio, temasCount, completadosCount }: Props) {
+  const progress = temasCount > 0 ? (completadosCount / temasCount) * 100 : 0;
   return (
     <Link
       to={`/aprender/${anio.id}`}
@@ -26,8 +29,17 @@ export function AnioCard({ anio, temasCount }: Props) {
       <div className="flex-1">
         <h3 className="text-lg font-bold text-slate-100">{anio.nombre}</h3>
         <p className="text-xs text-slate-400">
-          {temasCount} {temasCount === 1 ? 'tema disponible' : 'temas disponibles'}
+          {completadosCount} / {temasCount}{' '}
+          {temasCount === 1 ? 'tema completado' : 'temas completados'}
         </p>
+        {temasCount > 0 && (
+          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-800/80">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-emerald-400 via-brand-400 to-sky-400 transition-all"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+        )}
       </div>
       <ChevronRight className="h-5 w-5 text-slate-500 transition-transform group-hover:translate-x-1" />
     </Link>

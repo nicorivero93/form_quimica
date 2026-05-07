@@ -6,6 +6,7 @@ import { LabPage } from './pages/LabPage';
 import { AprenderPage } from './pages/AprenderPage';
 import { AnioPage } from './pages/AnioPage';
 import { TemaPage } from './pages/TemaPage';
+import { BuscarTemasPage } from './pages/BuscarTemasPage';
 
 export function App() {
   return (
@@ -18,6 +19,7 @@ export function App() {
           <Route path="/element/:symbol/structure/:id" element={<HomePage />} />
           <Route path="/lab" element={<LabPage />} />
           <Route path="/aprender" element={<AprenderPage />} />
+          <Route path="/aprender/buscar" element={<BuscarTemasPage />} />
           <Route path="/aprender/tema/:slug" element={<TemaPage />} />
           <Route path="/aprender/:anioId" element={<AnioPage />} />
         </Routes>
