@@ -1,0 +1,61 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Test
+coverage/
+playwright-report/
+test-results/
+playwright/.cache/
+
+# CIFs crudos descargados (no van al repo, sólo los JSONs procesados)
+scripts/cif-cache/
+scripts/__pycache__/
+scripts/*.pyc
+
+# Python venv (si Nico lo crea para correr el script)
+.venv/
+venv/
+
+# PWA
+dev-dist/
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+
+# Documentación comercial / propuestas (regla global #8)
+docs/propuestas/
+docs/ADENDA-*.md
+*.pdf

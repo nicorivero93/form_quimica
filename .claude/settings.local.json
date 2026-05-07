@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}  size=%{size_download}b  time=%{time_total}s\\\\n\" https://tablaperiodica-inter.web.app/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}  size=%{size_download}b\\\\n\" https://tablaperiodica-inter.web.app/data/crystals/Au-fcc.json)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}  size=%{size_download}b\\\\n\" https://tablaperiodica-inter.web.app/data/crystals/diamond.json)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}  size=%{size_download}b\\\\n\" https://tablaperiodica-inter.web.app/data/crystals/NaCl.json)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" https://tablaperiodica-inter.web.app/sw.js)",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "mcp__Claude_in_Chrome__find",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

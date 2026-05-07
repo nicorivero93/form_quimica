@@ -1,0 +1,49 @@
+{
+  "id": "Po-sc",
+  "formula": "Po",
+  "name": "Polonio cúbico simple",
+  "spaceGroup": "Pm-3m",
+  "spaceGroupNumber": 221,
+  "lattice": {
+    "a": 3.345,
+    "b": 3.345,
+    "c": 3.345,
+    "alpha": 90.0,
+    "beta": 90.0,
+    "gamma": 90.0
+  },
+  "cellMatrix": [
+    [
+      3.345,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      3.345,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      3.345
+    ]
+  ],
+  "atoms": [
+    {
+      "element": "Po",
+      "frac": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "source": "COD 1509138",
+  "codId": 1509138
+}
