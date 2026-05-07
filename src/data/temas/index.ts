@@ -4,6 +4,11 @@ import { estequiometria } from './secundaria-4/estequiometria';
 import { gasesIdeales } from './secundaria-4/gases-ideales';
 import { concentracion } from './secundaria-4/concentracion';
 import { phPoh } from './secundaria-4/ph-poh';
+import { termoquimica } from './secundaria-5/termoquimica';
+import { equilibrio } from './secundaria-5/equilibrio';
+import { cinetica } from './secundaria-5/cinetica';
+import { redox } from './secundaria-5/redox';
+import { organicaBasica } from './secundaria-5/organica-basica';
 
 export const TEMAS: Tema[] = [
   configuracionElectronica,
@@ -11,6 +16,11 @@ export const TEMAS: Tema[] = [
   gasesIdeales,
   concentracion,
   phPoh,
+  termoquimica,
+  equilibrio,
+  cinetica,
+  redox,
+  organicaBasica,
 ];
 
 const slugs = new Set<string>();
