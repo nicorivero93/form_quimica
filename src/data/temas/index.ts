@@ -1,6 +1,17 @@
 import type { AnioId, AreaQuimicaId, Tema } from '@/types/tema';
+import { configuracionElectronica } from './secundaria-4/configuracion-electronica';
+import { estequiometria } from './secundaria-4/estequiometria';
+import { gasesIdeales } from './secundaria-4/gases-ideales';
+import { concentracion } from './secundaria-4/concentracion';
+import { phPoh } from './secundaria-4/ph-poh';
 
-export const TEMAS: Tema[] = [];
+export const TEMAS: Tema[] = [
+  configuracionElectronica,
+  estequiometria,
+  gasesIdeales,
+  concentracion,
+  phPoh,
+];
 
 const slugs = new Set<string>();
 for (const t of TEMAS) {
