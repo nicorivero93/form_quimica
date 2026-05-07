@@ -1,10 +1,11 @@
 import { Link, useLocation } from 'react-router-dom';
-import { FlaskConical, TableProperties } from 'lucide-react';
+import { FlaskConical, GraduationCap, TableProperties } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const TABS = [
   { to: '/', label: 'Tabla periódica', icon: TableProperties, match: (p: string) => p === '/' || p.startsWith('/element') },
   { to: '/lab', label: 'Laboratorio', icon: FlaskConical, match: (p: string) => p.startsWith('/lab') },
+  { to: '/aprender', label: 'Aprender', icon: GraduationCap, match: (p: string) => p.startsWith('/aprender') },
 ];
 
 export function AppNav() {
