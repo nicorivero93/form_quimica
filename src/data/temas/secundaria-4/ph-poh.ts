@@ -170,6 +170,7 @@ export const phPoh: Tema = {
       },
     ],
   },
+  visualizadorId: 'ph-slider',
   relacionados: ['concentracion-soluciones'],
   tags: ['pH', 'pOH', 'ácidos', 'bases', 'logaritmo', 'Kw', 'autoionización'],
 };

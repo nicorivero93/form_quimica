@@ -110,6 +110,7 @@ export interface Tema {
   ejemplos: Ejemplo[];
   erroresComunes: string[];
   quiz?: Quiz;
+  visualizadorId?: string;
   relacionados?: string[];
   tags: string[];
 }

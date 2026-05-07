@@ -143,6 +143,7 @@ export const redox: Tema = {
       },
     ],
   },
+  visualizadorId: 'numeros-oxidacion',
   relacionados: ['cinetica-quimica'],
   tags: ['redox', 'oxidación', 'reducción', 'agente oxidante', 'agente reductor', 'balanceo'],
 };

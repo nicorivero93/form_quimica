@@ -158,6 +158,7 @@ export const equilibrio: Tema = {
       },
     ],
   },
+  visualizadorId: 'le-chatelier',
   relacionados: ['termoquimica', 'cinetica-quimica'],
   tags: ['equilibrio', 'Keq', 'Le Chatelier', 'reversible', 'desplazamiento'],
 };

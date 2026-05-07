@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { ArrowLeft, AlertTriangle, Target, FlaskConical, BookOpen, Brain, Check, Circle } from 'lucide-react';
+import { ArrowLeft, AlertTriangle, Target, FlaskConical, BookOpen, Brain, Check, Circle, Wand2 } from 'lucide-react';
 import { ANIOS_BY_ID } from '@/data/anios-quimica';
 import { AREAS_BY_ID } from '@/data/areas-quimica';
 import { getTemaBySlug, TEMAS } from '@/data/temas';
@@ -8,6 +8,7 @@ import { BloqueTeoriaRender } from '@/components/aprender/BloqueTeoria';
 import { FormulaCard } from '@/components/aprender/FormulaCard';
 import { EjemploPasoAPaso } from '@/components/aprender/EjemploPasoAPaso';
 import { QuizSection } from '@/components/aprender/QuizSection';
+import { Visualizador } from '@/components/aprender/visualizadores';
 import { cn } from '@/lib/utils';
 
 const NIVEL_BADGE = {
@@ -95,6 +96,12 @@ export function TemaPage() {
               <FormulaCard key={i} formula={f} />
             ))}
           </div>
+        </Section>
+      )}
+
+      {tema.visualizadorId && (
+        <Section icon={Wand2} title="Probá vos mismo">
+          <Visualizador id={tema.visualizadorId} />
         </Section>
       )}
 
