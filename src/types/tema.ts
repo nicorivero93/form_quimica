@@ -1,6 +1,7 @@
 export type AnioId =
   | 'secundaria-4'
-  | 'secundaria-5';
+  | 'secundaria-5'
+  | 'cbc-quimica';
 
 export type AreaQuimicaId =
   | 'estructura-enlace'

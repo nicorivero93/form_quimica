@@ -21,6 +21,16 @@ export const ANIOS: Anio[] = [
     color: 'sky',
     orden: 2,
   },
+  {
+    id: 'cbc-quimica',
+    etapa: 'cbc',
+    numero: 1,
+    nombre: 'CBC / Química universitaria',
+    nombreCorto: 'CBC',
+    icono: '🎓',
+    color: 'fuchsia',
+    orden: 3,
+  },
 ];
 
 export const ANIOS_BY_ID: Record<AnioId, Anio> = Object.fromEntries(

@@ -17,6 +17,11 @@ import { organicaBasica } from './secundaria-5/organica-basica';
 import { alcoholesAldehidosCetonas } from './secundaria-5/alcoholes-aldehidos-cetonas';
 import { acidosEsteresAminas } from './secundaria-5/acidos-esteres-aminas';
 import { polimeros } from './secundaria-5/polimeros';
+import { equilibrioIonico } from './cbc-quimica/equilibrio-ionico';
+import { solucionesBuffer } from './cbc-quimica/soluciones-buffer';
+import { cineticaAvanzada } from './cbc-quimica/cinetica-avanzada';
+import { entropiaEnergiaLibre } from './cbc-quimica/entropia-energia-libre';
+import { nernstElectroquimica } from './cbc-quimica/nernst-electroquimica';
 
 export const TEMAS: Tema[] = [
   // Secundaria 4°
@@ -39,6 +44,12 @@ export const TEMAS: Tema[] = [
   alcoholesAldehidosCetonas,
   acidosEsteresAminas,
   polimeros,
+  // CBC / Universitario
+  equilibrioIonico,
+  solucionesBuffer,
+  cineticaAvanzada,
+  entropiaEnergiaLibre,
+  nernstElectroquimica,
 ];
 
 const slugs = new Set<string>();
