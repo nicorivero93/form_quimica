@@ -35,6 +35,12 @@ import { organicaBasica } from './secundaria-5/organica-basica';
 import { alcoholesAldehidosCetonas } from './secundaria-5/alcoholes-aldehidos-cetonas';
 import { acidosEsteresAminas } from './secundaria-5/acidos-esteres-aminas';
 import { polimeros } from './secundaria-5/polimeros';
+// Secundaria 6° (técnica / orientación)
+import { procesosIndustriales } from './secundaria-6/procesos-industriales';
+import { mecanismosOrganica } from './secundaria-6/mecanismos-organica';
+import { isomeriaAvanzada } from './secundaria-6/isomeria-avanzada';
+import { biomoleculas } from './secundaria-6/biomoleculas';
+import { corrosionProteccion } from './secundaria-6/corrosion-proteccion';
 // CBC
 import { equilibrioIonico } from './cbc-quimica/equilibrio-ionico';
 import { solucionesBuffer } from './cbc-quimica/soluciones-buffer';
@@ -79,6 +85,12 @@ export const TEMAS: Tema[] = [
   alcoholesAldehidosCetonas,
   acidosEsteresAminas,
   polimeros,
+  // Secundaria 6° (técnica / orientación)
+  procesosIndustriales,
+  mecanismosOrganica,
+  isomeriaAvanzada,
+  biomoleculas,
+  corrosionProteccion,
   // CBC / Universitario
   equilibrioIonico,
   solucionesBuffer,

@@ -52,6 +52,16 @@ export const ANIOS: Anio[] = [
     orden: 5,
   },
   {
+    id: 'secundaria-6',
+    etapa: 'secundaria',
+    numero: 6,
+    nombre: '6to año (técnica / orientación)',
+    nombreCorto: '6°',
+    icono: '🏭',
+    color: 'violet',
+    orden: 6,
+  },
+  {
     id: 'cbc-quimica',
     etapa: 'cbc',
     numero: 1,
@@ -59,7 +69,7 @@ export const ANIOS: Anio[] = [
     nombreCorto: 'CBC',
     icono: '🎓',
     color: 'fuchsia',
-    orden: 6,
+    orden: 7,
   },
 ];
 

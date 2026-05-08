@@ -15,6 +15,7 @@ const COLOR_CLASSES: Record<string, string> = {
   rose: 'border-rose-500/40 bg-rose-500/10 hover:border-rose-400 hover:bg-rose-500/15 text-rose-200',
   emerald: 'border-emerald-500/40 bg-emerald-500/10 hover:border-emerald-400 hover:bg-emerald-500/15 text-emerald-200',
   sky: 'border-sky-500/40 bg-sky-500/10 hover:border-sky-400 hover:bg-sky-500/15 text-sky-200',
+  violet: 'border-violet-500/40 bg-violet-500/10 hover:border-violet-400 hover:bg-violet-500/15 text-violet-200',
   fuchsia: 'border-fuchsia-500/40 bg-fuchsia-500/10 hover:border-fuchsia-400 hover:bg-fuchsia-500/15 text-fuchsia-200',
 };
 
