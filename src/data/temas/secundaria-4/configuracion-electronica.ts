@@ -39,9 +39,40 @@ export const configuracionElectronica: Tema = {
     {
       tipo: 'callout',
       variante: 'tip',
-      titulo: 'Regla nemotécnica',
+      titulo: 'Regla de las diagonales (diagrama de Moeller)',
       texto:
-        'Para no perderte el orden de llenado, dibujás la diagonal de Madelung: filas $1s$, $2s\\,2p$, $3s\\,3p\\,3d$, $4s\\,4p\\,4d\\,4f$… y trazás flechas diagonales hacia arriba.',
+        'Es la herramienta visual para no perderte el orden de llenado. Escribís los subniveles en filas (uno por nivel) y trazás flechas diagonales de arriba-derecha hacia abajo-izquierda. Seguís las flechas en orden y obtenés la secuencia de llenado.',
+    },
+    {
+      tipo: 'tabla',
+      encabezados: ['Nivel n', 'Subniveles disponibles'],
+      filas: [
+        ['1', '1s'],
+        ['2', '2s   2p'],
+        ['3', '3s   3p   3d'],
+        ['4', '4s   4p   4d   4f'],
+        ['5', '5s   5p   5d   5f'],
+        ['6', '6s   6p   6d'],
+        ['7', '7s   7p'],
+      ],
+    },
+    {
+      tipo: 'parrafo',
+      texto:
+        'Siguiendo las diagonales en orden, el llenado completo (con la cantidad máxima de electrones de cada subnivel) queda:',
+    },
+    {
+      tipo: 'latex',
+      display: true,
+      latex:
+        '1s^2 \\;\\; 2s^2\\,2p^6 \\;\\; 3s^2\\,3p^6 \\;\\; 4s^2\\,3d^{10}\\,4p^6 \\;\\; 5s^2\\,4d^{10}\\,5p^6 \\;\\; 6s^2\\,4f^{14}\\,5d^{10}\\,6p^6 \\;\\; 7s^2\\,5f^{14}\\,6d^{10}\\,7p^6',
+    },
+    {
+      tipo: 'callout',
+      variante: 'definicion',
+      titulo: 'Por qué funciona: regla de Madelung (n+ℓ)',
+      texto:
+        'La energía de un subnivel se ordena por la suma $n+\\ell$, donde $\\ell$ vale 0 para s, 1 para p, 2 para d y 3 para f. Los subniveles con menor $n+\\ell$ se llenan primero; si dos empatan, gana el de menor $n$. Por eso $4s$ ($n+\\ell=4$) se llena antes que $3d$ ($n+\\ell=5$).',
     },
     {
       tipo: 'parrafo',
@@ -97,6 +128,24 @@ export const configuracionElectronica: Tema = {
       ],
       resultado: 'Fe: [Ar] $4s^2 3d^6$.',
     },
+    {
+      titulo: 'Bromo (Z=35) usando la regla de las diagonales',
+      enunciado: 'Aplicar el diagrama de Moeller para escribir la configuración electrónica del Br.',
+      pasos: [
+        {
+          explicacion:
+            'Seguimos las diagonales en orden y vamos repartiendo los 35 electrones: $1s$ (2) → $2s$ (2) → $2p$ (6) → $3s$ (2) → $3p$ (6) → $4s$ (2) → $3d$ (10) → $4p$ (?).',
+        },
+        {
+          explicacion: 'Sumamos lo ya colocado: $2+2+6+2+6+2+10 = 30$. Quedan $35-30 = 5$ electrones para $4p$.',
+        },
+        {
+          explicacion: 'Escribimos la configuración completa.',
+          latex: '1s^2 \\, 2s^2 \\, 2p^6 \\, 3s^2 \\, 3p^6 \\, 4s^2 \\, 3d^{10} \\, 4p^5',
+        },
+      ],
+      resultado: 'Br: $1s^2 2s^2 2p^6 3s^2 3p^6 4s^2 3d^{10} 4p^5$ — equivale a $[Ar]\\,4s^2\\,3d^{10}\\,4p^5$.',
+    },
   ],
   erroresComunes: [
     'Llenar el $3d$ antes que el $4s$: el orden de llenado es $4s$ primero, después $3d$.',
@@ -133,7 +182,32 @@ export const configuracionElectronica: Tema = {
         explicacion:
           'Por eso son inertes: tienen su capa de valencia completa (regla del octeto), lo que los hace muy estables.',
       },
+      {
+        tipo: 'multiple',
+        enunciado: 'Según la regla de las diagonales, ¿qué subnivel se llena inmediatamente después del $4s$?',
+        opciones: ['$3d$', '$4p$', '$4d$', '$5s$'],
+        correcta: 0,
+        explicacion:
+          'La diagonal que cruza $4s$ continúa en $3d$. Además $n+\\ell$: $4s = 4$, $3d = 5$, $4p = 5$ (empate $3d/4p$, gana el de menor $n$, o sea $3d$).',
+      },
+      {
+        tipo: 'multiple',
+        enunciado: 'Usando la regla $n+\\ell$, ¿cuál de estos subniveles tiene mayor energía?',
+        opciones: ['$3d$ ($n+\\ell=5$)', '$4p$ ($n+\\ell=5$)', '$5s$ ($n+\\ell=5$)', '$4d$ ($n+\\ell=6$)'],
+        correcta: 3,
+        explicacion:
+          'A mayor $n+\\ell$, mayor energía. $4d$ tiene $n+\\ell=6$, los otros tres empatan en 5 (y entre ellos gana energía el de mayor $n$: $5s > 4p > 3d$).',
+      },
     ],
   },
-  tags: ['configuración electrónica', 'aufbau', 'subniveles', 'electrones de valencia', 'estructura atómica'],
+  tags: [
+    'configuración electrónica',
+    'aufbau',
+    'subniveles',
+    'electrones de valencia',
+    'estructura atómica',
+    'regla de las diagonales',
+    'diagrama de moeller',
+    'madelung',
+  ],
 };
