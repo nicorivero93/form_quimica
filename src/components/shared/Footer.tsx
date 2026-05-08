@@ -1,3 +1,5 @@
+import { APP_VERSION } from '@/lib/version';
+
 export function Footer() {
   return (
     <footer className="px-4 py-3 text-center text-xs text-slate-500">
@@ -10,6 +12,7 @@ export function Footer() {
       >
         tomerivero.dev
       </a>
+      <span className="text-slate-700"> · v {APP_VERSION}</span>
     </footer>
   );
 }

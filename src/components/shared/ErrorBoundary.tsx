@@ -1,5 +1,5 @@
 import { Component, type ReactNode, type ErrorInfo } from 'react';
-import { captureError } from '@/lib/sentry';
+import { captureError, tryReloadOnChunkError } from '@/lib/error-capture';
 
 interface Props {
   children: ReactNode;
@@ -15,11 +15,16 @@ export class ErrorBoundary extends Component<Props, State> {
   state: State = { hasError: false, error: null };
 
   static getDerivedStateFromError(error: Error): State {
+    if (tryReloadOnChunkError(error)) return { hasError: false, error: null };
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, info: ErrorInfo): void {
-    captureError(error, { componentStack: info.componentStack });
+    if (tryReloadOnChunkError(error)) return;
+    captureError(error, {
+      component: 'ErrorBoundary',
+      extra: { componentStack: info.componentStack },
+    });
   }
 
   reset = (): void => {

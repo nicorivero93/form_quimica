@@ -9,10 +9,12 @@ import { get, set, del } from 'idb-keyval';
 import { App } from './App';
 import { initSentry } from './lib/sentry';
 import { initFirebase } from './lib/firebase';
+import { installGlobalErrorHandlers } from './lib/error-capture';
 import { ErrorBoundary } from './components/shared/ErrorBoundary';
 import './styles/globals.css';
 
 initSentry();
+installGlobalErrorHandlers();
 initFirebase();
 
 const queryClient = new QueryClient({

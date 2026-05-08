@@ -1,6 +1,8 @@
 import { Routes, Route } from 'react-router-dom';
 import { AppNav } from './components/shared/AppNav';
 import { Footer } from './components/shared/Footer';
+import { WhatsAppFAB } from './components/WhatsAppFAB';
+import { FeedbackWidget } from './components/FeedbackWidget';
 import { HomePage } from './pages/HomePage';
 import { LabPage } from './pages/LabPage';
 import { AprenderPage } from './pages/AprenderPage';
@@ -25,6 +27,8 @@ export function App() {
         </Routes>
       </main>
       <Footer />
+      <FeedbackWidget />
+      <WhatsAppFAB />
     </div>
   );
 }
