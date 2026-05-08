@@ -10,6 +10,9 @@ interface Props {
 }
 
 const COLOR_CLASSES: Record<string, string> = {
+  lime: 'border-lime-500/40 bg-lime-500/10 hover:border-lime-400 hover:bg-lime-500/15 text-lime-200',
+  amber: 'border-amber-500/40 bg-amber-500/10 hover:border-amber-400 hover:bg-amber-500/15 text-amber-200',
+  rose: 'border-rose-500/40 bg-rose-500/10 hover:border-rose-400 hover:bg-rose-500/15 text-rose-200',
   emerald: 'border-emerald-500/40 bg-emerald-500/10 hover:border-emerald-400 hover:bg-emerald-500/15 text-emerald-200',
   sky: 'border-sky-500/40 bg-sky-500/10 hover:border-sky-400 hover:bg-sky-500/15 text-sky-200',
   fuchsia: 'border-fuchsia-500/40 bg-fuchsia-500/10 hover:border-fuchsia-400 hover:bg-fuchsia-500/15 text-fuchsia-200',

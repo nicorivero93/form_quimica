@@ -1,4 +1,7 @@
 export type AnioId =
+  | 'secundaria-1'
+  | 'secundaria-2'
+  | 'secundaria-3'
   | 'secundaria-4'
   | 'secundaria-5'
   | 'cbc-quimica';

@@ -1,4 +1,21 @@
 import type { AnioId, AreaQuimicaId, Tema } from '@/types/tema';
+// Secundaria 1°
+import { queEsLaMateria } from './secundaria-1/que-es-la-materia';
+import { estadosMateria } from './secundaria-1/estados-materia';
+import { metodosSeparacion } from './secundaria-1/metodos-separacion';
+import { propiedadesMateria } from './secundaria-1/propiedades-materia';
+// Secundaria 2°
+import { elAtomo } from './secundaria-2/el-atomo';
+import { elementosCompuestos } from './secundaria-2/elementos-compuestos';
+import { simbolosFormulas } from './secundaria-2/simbolos-formulas';
+import { reaccionesQuimicasIntro } from './secundaria-2/reacciones-quimicas-intro';
+// Secundaria 3°
+import { tablaPeriodicaOrganizacion } from './secundaria-3/tabla-periodica-organizacion';
+import { ionesCompuestosIonicos } from './secundaria-3/iones-compuestos-ionicos';
+import { nomenclaturaOxidos } from './secundaria-3/nomenclatura-oxidos';
+import { nomenclaturaHidroxidosAcidos } from './secundaria-3/nomenclatura-hidroxidos-acidos';
+import { balanceoEcuaciones } from './secundaria-3/balanceo-ecuaciones';
+// Secundaria 4°
 import { configuracionElectronica } from './secundaria-4/configuracion-electronica';
 import { modelosAtomicos } from './secundaria-4/modelos-atomicos';
 import { enlaceIonico } from './secundaria-4/enlace-ionico';
@@ -8,6 +25,7 @@ import { gasesIdeales } from './secundaria-4/gases-ideales';
 import { concentracion } from './secundaria-4/concentracion';
 import { phPoh } from './secundaria-4/ph-poh';
 import { neutralizacion } from './secundaria-4/neutralizacion';
+// Secundaria 5°
 import { termoquimica } from './secundaria-5/termoquimica';
 import { equilibrio } from './secundaria-5/equilibrio';
 import { cinetica } from './secundaria-5/cinetica';
@@ -17,6 +35,7 @@ import { organicaBasica } from './secundaria-5/organica-basica';
 import { alcoholesAldehidosCetonas } from './secundaria-5/alcoholes-aldehidos-cetonas';
 import { acidosEsteresAminas } from './secundaria-5/acidos-esteres-aminas';
 import { polimeros } from './secundaria-5/polimeros';
+// CBC
 import { equilibrioIonico } from './cbc-quimica/equilibrio-ionico';
 import { solucionesBuffer } from './cbc-quimica/soluciones-buffer';
 import { cineticaAvanzada } from './cbc-quimica/cinetica-avanzada';
@@ -24,6 +43,22 @@ import { entropiaEnergiaLibre } from './cbc-quimica/entropia-energia-libre';
 import { nernstElectroquimica } from './cbc-quimica/nernst-electroquimica';
 
 export const TEMAS: Tema[] = [
+  // Secundaria 1°
+  queEsLaMateria,
+  estadosMateria,
+  metodosSeparacion,
+  propiedadesMateria,
+  // Secundaria 2°
+  elAtomo,
+  elementosCompuestos,
+  simbolosFormulas,
+  reaccionesQuimicasIntro,
+  // Secundaria 3°
+  tablaPeriodicaOrganizacion,
+  ionesCompuestosIonicos,
+  nomenclaturaOxidos,
+  nomenclaturaHidroxidosAcidos,
+  balanceoEcuaciones,
   // Secundaria 4°
   modelosAtomicos,
   configuracionElectronica,
