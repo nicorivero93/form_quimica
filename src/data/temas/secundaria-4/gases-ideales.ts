@@ -139,6 +139,7 @@ export const gasesIdeales: Tema = {
       },
     ],
   },
+  visualizadorId: 'gases-ideales-sliders',
   relacionados: ['calculos-estequiometricos'],
   tags: ['gases ideales', 'PV=nRT', 'boyle', 'charles', 'gay-lussac', 'CNPT'],
 };

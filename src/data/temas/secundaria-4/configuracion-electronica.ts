@@ -200,6 +200,7 @@ export const configuracionElectronica: Tema = {
       },
     ],
   },
+  visualizadorId: 'diagrama-moeller',
   tags: [
     'configuración electrónica',
     'aufbau',

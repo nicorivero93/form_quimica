@@ -161,6 +161,7 @@ export const cinetica: Tema = {
       },
     ],
   },
+  visualizadorId: 'curva-cinetica',
   relacionados: ['equilibrio-quimico', 'termoquimica'],
   tags: ['cinética', 'velocidad', 'energía de activación', 'arrhenius', 'catalizador', 'inhibidor'],
 };

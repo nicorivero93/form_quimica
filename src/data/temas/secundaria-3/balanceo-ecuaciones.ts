@@ -155,6 +155,7 @@ export const balanceoEcuaciones: Tema = {
       },
     ],
   },
+  visualizadorId: 'balanceador-ecuaciones',
   relacionados: ['reacciones-quimicas-intro', 'calculos-estequiometricos'],
   tags: ['balanceo', 'lavoisier', 'tanteo', 'coeficientes', 'ecuación química'],
 };

@@ -128,6 +128,7 @@ export const enlaceCovalente: Tema = {
       },
     ],
   },
+  visualizadorId: 'formacion-enlace',
   relacionados: ['configuracion-electronica', 'enlace-ionico'],
   tags: ['enlace covalente', 'lewis', 'polar', 'apolar', 'doble enlace', 'triple enlace'],
 };

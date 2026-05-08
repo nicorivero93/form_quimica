@@ -128,6 +128,7 @@ export const enlaceIonico: Tema = {
       },
     ],
   },
+  visualizadorId: 'formacion-enlace',
   relacionados: ['configuracion-electronica', 'enlace-covalente'],
   tags: ['enlace iónico', 'catión', 'anión', 'red cristalina', 'octeto', 'electronegatividad'],
 };

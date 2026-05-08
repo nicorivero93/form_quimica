@@ -108,6 +108,7 @@ export const modelosAtomicos: Tema = {
       },
     ],
   },
+  visualizadorId: 'orbitales-atomicos',
   relacionados: ['configuracion-electronica'],
-  tags: ['modelos atómicos', 'dalton', 'thomson', 'rutherford', 'bohr', 'cuántico', 'historia'],
+  tags: ['modelos atómicos', 'dalton', 'thomson', 'rutherford', 'bohr', 'cuántico', 'historia', 'orbitales'],
 };

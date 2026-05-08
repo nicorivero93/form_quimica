@@ -163,6 +163,7 @@ export const termoquimica: Tema = {
       },
     ],
   },
+  visualizadorId: 'diagrama-energia',
   relacionados: ['cinetica-equilibrio'],
   tags: ['termoquímica', 'entalpía', 'ΔH', 'calor', 'hess', 'exotérmica', 'endotérmica'],
 };
